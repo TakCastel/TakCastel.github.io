@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pro on Tak Castel</title>
-    <link>http://localhost:50958/tags/pro/</link>
+    <link>https://takcastel.github.io/website2017/tags/pro/</link>
     <description>Recent content in Pro on Tak Castel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <copyright>&amp;copy; 2017 TakCastel</copyright>
     <lastBuildDate>Mon, 16 Oct 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/pro/" rel="self" type="application/rss+xml" />
+    <atom:link href="/website2017/tags/pro/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Journalist private blog</title>
-      <link>http://localhost:50958/project/relig/</link>
+      <link>https://takcastel.github.io/website2017/project/relig/</link>
       <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:50958/project/relig/</guid>
+      <guid>https://takcastel.github.io/website2017/project/relig/</guid>
       <description></description>
     </item>
     

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Tak Castel</title>
-    <link>http://localhost:50958/post/</link>
+    <link>https://takcastel.github.io/website2017/post/</link>
     <description>Recent content in Posts on Tak Castel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <copyright>&amp;copy; 2017 TakCastel</copyright>
     <lastBuildDate>Fri, 13 Oct 2017 00:00:00 +0200</lastBuildDate>
-    <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    <atom:link href="/website2017/post/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Créer une application reactJS </title>
-      <link>http://localhost:50958/post/react-course/</link>
+      <link>https://takcastel.github.io/website2017/post/react-course/</link>
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0200</pubDate>
       
-      <guid>http://localhost:50958/post/react-course/</guid>
+      <guid>https://takcastel.github.io/website2017/post/react-course/</guid>
       <description>&lt;p&gt;Cet article est un témoin du cours React sur le courselab.&lt;/p&gt;
 
 &lt;p&gt;Ensemble, nous allons apprendre à développer un petit projet pour prendre en main la librairie React de Javascript, développée par Facebook. Ce projet vous permettra d&amp;rsquo;appréhender cette bibliothèque et en saisir tout son potentiel.&lt;/p&gt;

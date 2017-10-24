@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types on Tak Castel</title>
-    <link>http://localhost:50958/publication_types/</link>
+    <link>https://takcastel.github.io/website2017/publication_types/</link>
     <description>Recent content in Publication_types on Tak Castel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <copyright>&amp;copy; 2017 TakCastel</copyright>
-    <atom:link href="/publication_types/" rel="self" type="application/rss+xml" />
+    <atom:link href="/website2017/publication_types/" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

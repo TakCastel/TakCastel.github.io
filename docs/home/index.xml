@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Tak Castel</title>
-    <link>http://localhost:50958/home/</link>
+    <link>https://takcastel.github.io/website2017/home/</link>
     <description>Recent content in Homes on Tak Castel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <copyright>&amp;copy; 2017 TakCastel</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/home/" rel="self" type="application/rss+xml" />
+    <atom:link href="/website2017/home/" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

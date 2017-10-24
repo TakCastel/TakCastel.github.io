@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Perso on Tak Castel</title>
-    <link>http://localhost:50958/tags/perso/</link>
+    <link>https://takcastel.github.io/website2017/tags/perso/</link>
     <description>Recent content in Perso on Tak Castel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <copyright>&amp;copy; 2017 TakCastel</copyright>
     <lastBuildDate>Sat, 01 Jul 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/perso/" rel="self" type="application/rss+xml" />
+    <atom:link href="/website2017/tags/perso/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Gamestory web app</title>
-      <link>http://localhost:50958/project/gs/</link>
+      <link>https://takcastel.github.io/website2017/project/gs/</link>
       <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:50958/project/gs/</guid>
+      <guid>https://takcastel.github.io/website2017/project/gs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SWOR Forum</title>
-      <link>http://localhost:50958/project/swor/</link>
+      <link>https://takcastel.github.io/website2017/project/swor/</link>
       <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:50958/project/swor/</guid>
+      <guid>https://takcastel.github.io/website2017/project/swor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Children of Memories RPG</title>
-      <link>http://localhost:50958/project/aom/</link>
+      <link>https://takcastel.github.io/website2017/project/aom/</link>
       <pubDate>Sun, 15 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:50958/project/aom/</guid>
+      <guid>https://takcastel.github.io/website2017/project/aom/</guid>
       <description></description>
     </item>
     

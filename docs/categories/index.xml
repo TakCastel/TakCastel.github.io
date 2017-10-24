@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Tak Castel</title>
-    <link>http://localhost:50958/categories/</link>
+    <link>https://takcastel.github.io/website2017/categories/</link>
     <description>Recent content in Categories on Tak Castel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <copyright>&amp;copy; 2017 TakCastel</copyright>
-    <atom:link href="/categories/" rel="self" type="application/rss+xml" />
+    <atom:link href="/website2017/categories/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Formation</title>
-      <link>http://localhost:50958/categories/formation/</link>
+      <link>https://takcastel.github.io/website2017/categories/formation/</link>
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0200</pubDate>
       
-      <guid>http://localhost:50958/categories/formation/</guid>
+      <guid>https://takcastel.github.io/website2017/categories/formation/</guid>
       <description></description>
     </item>
     
