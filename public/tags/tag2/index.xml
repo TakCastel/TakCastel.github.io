@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tag2 on Tak Castel</title>
+    <link>https://takcastel.com/tags/tag2/</link>
+    <description>Recent content in Tag2 on Tak Castel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <copyright>&amp;copy; 2017 TakCastel</copyright>
+    <lastBuildDate>Fri, 13 Oct 2017 00:00:00 +0200</lastBuildDate>
+    <atom:link href="/tags/tag2/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Titre</title>
+      <link>https://takcastel.com/post/untitled/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0200</pubDate>
+      
+      <guid>https://takcastel.com/post/untitled/</guid>
+      <description>&lt;p&gt;Conenu de l&amp;rsquo;article&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

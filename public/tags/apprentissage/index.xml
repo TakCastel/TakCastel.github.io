@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apprentissage on Tak Castel</title>
+    <link>https://takcastek.com/tags/apprentissage/</link>
+    <description>Recent content in Apprentissage on Tak Castel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 TakCastel</copyright>
+    <lastBuildDate>Fri, 13 Oct 2017 00:00:00 +0200</lastBuildDate>
+    <atom:link href="/tags/apprentissage/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Titre</title>
+      <link>https://takcastek.com/post/untitled/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0200</pubDate>
+      
+      <guid>https://takcastek.com/post/untitled/</guid>
+      <description>&lt;p&gt;Conenu de l&amp;rsquo;article&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tak Castel on Tak Castel</title>
+    <link>https://takcastel.com/</link>
+    <description>Recent content in Tak Castel on Tak Castel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <copyright>&amp;copy; 2017 TakCastel</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Titre</title>
+      <link>https://takcastel.com/post/untitled/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0200</pubDate>
+      
+      <guid>https://takcastel.com/post/untitled/</guid>
+      <description>&lt;p&gt;Conenu de l&amp;rsquo;article&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>https://takcastel.com/talk/example-talk/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://takcastel.com/talk/example-talk/</guid>
+      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Person Re-Identification System For Mobile Devices</title>
+      <link>https://takcastel.com/publication/person-re-identification/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://takcastel.com/publication/person-re-identification/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mobile visual clothing search</title>
+      <link>https://takcastel.com/publication/clothing-search/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://takcastel.com/publication/clothing-search/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Children of Memories RPG</title>
+      <link>https://takcastel.com/project/aom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://takcastel.com/project/aom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gamestory web app</title>
+      <link>https://takcastel.com/project/gs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://takcastel.com/project/gs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Journalist private blog</title>
+      <link>https://takcastel.com/project/relig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://takcastel.com/project/relig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SWOR Forum</title>
+      <link>https://takcastel.com/project/swor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://takcastel.com/project/swor/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
