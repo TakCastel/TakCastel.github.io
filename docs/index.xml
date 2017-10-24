@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tak Castel on Tak Castel</title>
+    <link>http://localhost:50958/</link>
+    <description>Recent content in Tak Castel on Tak Castel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <copyright>&amp;copy; 2017 TakCastel</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Journalist private blog</title>
+      <link>http://localhost:50958/project/relig/</link>
+      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:50958/project/relig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Créer une application reactJS </title>
+      <link>http://localhost:50958/post/react-course/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:50958/post/react-course/</guid>
+      <description>&lt;p&gt;Cet article est un témoin du cours React sur le courselab.&lt;/p&gt;
+
+&lt;p&gt;Ensemble, nous allons apprendre à développer un petit projet pour prendre en main la librairie React de Javascript, développée par Facebook. Ce projet vous permettra d&amp;rsquo;appréhender cette bibliothèque et en saisir tout son potentiel.&lt;/p&gt;
+
+&lt;p&gt;Pour vous apprendre à bien maîtriser React, je pense que le mieux est de vous accompagner pas à pas dans la création d&amp;rsquo;un petit jeu de rôle par navigateur qui ne nécessitera pas de graphismes. Nous créerons un simple site à l&amp;rsquo;image des livres d&amp;rsquo;aventure que l&amp;rsquo;on appelle les livres-jeux.&lt;/p&gt;
+
+&lt;p&gt;Les livres dont vous êtes le héros sont des aventures narratives dans lesquelles vous incarnez un personnage et avez généralement entre 2 à 6 choix à la fin de chaque paragraphe. Ces choix vous emmènent vers d&amp;rsquo;autres paragraphes qui poursuivent l&amp;rsquo;aventure vers de nouveaux chemins.&lt;/p&gt;
+
+&lt;p&gt;Si vous ne connaissez pas ce concept, je vous invite à lire l&amp;rsquo;article wikipédia sur les &lt;a href=&#34;https://fr.wikipedia.org/wiki/D%C3%A9fis_fantastiques&#34; target=&#34;_blank&#34;&gt;défis fantastiques&lt;/a&gt;, une collection très célèbre des années 80, grâce à laquelle j&amp;rsquo;ai eu l&amp;rsquo;idée de réaliser cette petite application web.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;application démarre avec un fichier principal App.js :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import React, { Component } from &#39;react&#39;
+import { BrowserRouter as Router, Route } from &#39;react-router-dom&#39;
+import { randomDice, saveCharacter, deleteCharacter } from &#39;./Services.js&#39;
+import Header from &#39;./Header.js&#39;
+import Game from &#39;./Game.js&#39;
+import Character from &#39;./Character.js&#39;
+import Home from &#39;./Home.js&#39;
+import &#39;./App.css&#39;
+
+class App extends Component {
+
+/* ===========================================================
+FONCTIONS DE CHARGEMENT DU PERSONNAGE
+=========================================================== */
+
+constructor(props) {
+    super(props);
+    this.state = {
+    characterCreated: false, // Personnage créé ou pas
+    name: &#39;&#39;, // Nom du personnage
+    tmpName: &#39;&#39;, // Nom temporaire
+    strenght: 0, // Force du personnage
+    health: 0, // Santé du personnage
+    chance: 0 // Chance du personnage
+    }
+}
+
+// Chargement du personnage
+componentDidMount() {
+    const name = localStorage.getItem(&#39;name&#39;)
+    const strenght = localStorage.getItem(&#39;strenght&#39;)
+    const health = localStorage.getItem(&#39;health&#39;)
+
+    if (name !== null &amp;amp;&amp;amp; strenght !== null &amp;amp;&amp;amp; health !== null) {
+    this.setState({
+        characterCreated: true,
+        name, 
+        strenght: parseInt(strenght, 10), 
+        health: parseInt(health, 10),
+        chance: parseInt(health, 10)
+    })
+    } 
+}
+
+/* ===========================================================
+FONCTIONS DE CREATION DU PERSONNAGE
+=========================================================== */
+
+// Sauvegarde temporaire de l&#39;entrée saisie dans l&#39;input
+handleChange(event) {
+    this.setState({tmpName :event.target.value})
+}
+
+// Transfert de la valeur temporaire à la valeur finale
+submitForm(event) {
+    event.preventDefault()
+    this.setState({name: this.state.tmpName})
+
+    saveCharacter(this.state.tmpName, this.state.strenght, this.state.health, this.state.chance)
+}
+
+// Génération aléatoire des caractéristiques
+createCharacter(event) {
+    event.preventDefault()
+    const strenght = randomDice(7,12)
+    const health = randomDice(14,24)
+    const chance = randomDice(7,12)
+
+    this.setState({
+    characterCreated: true,
+    strenght: strenght,
+    health: health,
+    chance: chance
+    })
+
+    saveCharacter(this.state.name, strenght, health, chance)
+}
+
+/* ===========================================================
+FONCTIONS DE SUPPRESSION DU PERSONNAGE
+=========================================================== */
+
+// Supprime les données du state et du local storage
+restartGame() {
+    this.setState({
+    characterCreated: false,
+    name: &#39;&#39;,
+    tmpName: &#39;&#39;,
+    strenght: 0,
+    health: 0,
+    chance: 0
+    })
+
+    deleteCharacter()
+}
+
+/* ===========================================================
+AFFICHAGE DU COMPOSANT DANS LE DOM
+=========================================================== */
+
+render() {
+
+    return (
+    &amp;lt;Router&amp;gt;
+        &amp;lt;div&amp;gt;
+        &amp;lt;Header
+            restartGame={() =&amp;gt; this.restartGame()}
+        &amp;gt;&amp;lt;/Header&amp;gt;
+        &amp;lt;Route 
+            exact path=&amp;quot;/&amp;quot; 
+            render = {() =&amp;gt; (
+            &amp;lt;Home
+                characterCreated = {this.state.characterCreated}
+            &amp;gt;&amp;lt;/Home&amp;gt;
+            )}
+        &amp;gt;&amp;lt;/Route&amp;gt;
+        &amp;lt;Route 
+            exact path=&amp;quot;/game&amp;quot; 
+            render = {() =&amp;gt; (
+            &amp;lt;Game
+                name = {this.state.name}
+                strenght = {this.state.strenght}
+                health = {this.state.health}
+                chance = {this.state.chance}
+            &amp;gt;&amp;lt;/Game&amp;gt;
+            )}
+        &amp;gt;&amp;lt;/Route&amp;gt;
+        &amp;lt;Route 
+            exact path=&amp;quot;/character&amp;quot; 
+            render = {() =&amp;gt; (
+            &amp;lt;Character
+                characterCreated = {this.state.characterCreated}
+                name = {this.state.name}
+                tmpName = {this.state.tmpName}
+                strenght = {this.state.strenght}
+                health = {this.state.health}
+                chance = {this.state.chance}
+                handleChange = {(event) =&amp;gt; this.handleChange(event)}
+                submitForm = {(event) =&amp;gt; this.submitForm(event)}
+                createCharacter = {(event) =&amp;gt; this.createCharacter(event)}
+            &amp;gt;&amp;lt;/Character&amp;gt;
+            )}
+        &amp;gt;&amp;lt;/Route&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/Router&amp;gt;
+    );
+}
+
+}
+
+export default App;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Puis un fichier Character.js :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import React, { Component } from &#39;react&#39;
+import { Link } from &#39;react-router-dom&#39;
+
+class Character extends Component {
+
+constructor(props) {
+    super(props);
+    this.state = {
+    submitted: false, // Indique si on a validé le nom
+    };
+}
+
+// Renvoie un message d&#39;erreur s&#39;il n&#39;y a pas de nom renseigné
+getWarning() {
+    if (this.state.submitted &amp;amp;&amp;amp; this.props.name === &#39;&#39;) {
+    return (
+        &amp;lt;p&amp;gt; Vous devez renseigner un nom !&amp;lt;/p&amp;gt;
+    )
+    }
+}
+
+// Affiche le formulaire de génération des caracs une fois le nom renseigné
+getCarac() {
+    if (this.state.submitted &amp;amp;&amp;amp; this.props.name !== &#39;&#39;)
+    return (
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;Attribuer de nouvelles caractéristiques :&amp;lt;/p&amp;gt;
+        &amp;lt;button
+        className=&amp;quot;App-btn&amp;quot;
+        onClick={(event) =&amp;gt; this.props.createCharacter(event)}&amp;gt;
+        Générer
+        &amp;lt;/button&amp;gt;
+        &amp;lt;p&amp;gt;Force : {this.props.strenght}&amp;lt;/p&amp;gt;
+        &amp;lt;p&amp;gt;Santé : {this.props.health}&amp;lt;/p&amp;gt;
+        &amp;lt;p&amp;gt;Chance : {this.props.chance}&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+    )
+}
+
+// Affiche un lien vers le jeu une fois le personnage créé
+getPlay() {
+    if (this.props.characterCreated === true &amp;amp;&amp;amp; this.state.submitted === true) {
+    return (
+        &amp;lt;Link className=&amp;quot;App-btn&amp;quot; to={&#39;/game&#39;}&amp;gt;Jouer&amp;lt;/Link&amp;gt;
+    )
+    }
+}
+
+submitName(event) {
+    this.props.submitForm(event)
+    this.setState({submitted: true})
+}
+
+render() {
+    return (
+    &amp;lt;div className=&amp;quot;App&amp;quot;&amp;gt;
+        &amp;lt;form
+        className=&amp;quot;App-form&amp;quot;&amp;gt;
+        &amp;lt;div className=&amp;quot;App-form-group&amp;quot;&amp;gt;
+            &amp;lt;label htmlFor=&amp;quot;name&amp;quot;&amp;gt;Nom du personnage :&amp;lt;/label&amp;gt;
+            &amp;lt;input 
+            htmlFor=&amp;quot;name&amp;quot;
+            id=&amp;quot;name&amp;quot; 
+            type=&amp;quot;text&amp;quot; 
+            value={this.props.tmpName}
+            onChange={(event) =&amp;gt; this.props.handleChange(event)}
+            placeholder=&amp;quot;John Doe&amp;quot;
+            /&amp;gt;
+            &amp;lt;button
+            className=&amp;quot;App-btn&amp;quot;
+            onClick={(event) =&amp;gt; this.submitName(event)}&amp;gt;
+            Nommer
+            &amp;lt;/button&amp;gt;
+            {this.getWarning()}
+            {this.getCarac()}
+            {this.getPlay()}            
+        &amp;lt;/div&amp;gt;
+        &amp;lt;/form&amp;gt; 
+    &amp;lt;/div&amp;gt;
+    );
+}
+
+}
+
+export default Character;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Et enfin 3 fichiers à part que sont le jeu dans Game.js :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import React, { Component } from &#39;react&#39;
+import Stats from &#39;./Stats.js&#39;
+
+class Game extends Component {
+
+render () {
+    return (
+    &amp;lt;div&amp;gt;
+        &amp;lt;Stats
+        name = {this.props.name}
+        strenght = {this.props.strenght}
+        health = {this.props.health}
+        chance = {this.props.chance}&amp;gt;
+        &amp;lt;/Stats&amp;gt;
+    &amp;lt;/div&amp;gt;
+    )
+}
+
+}
+
+export default Game;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Les statistqiues du personnage dans Stats.js&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import React, { Component } from &#39;react&#39;
+
+class Stats extends Component {
+
+render () {
+    return (
+    &amp;lt;ul&amp;gt;
+        &amp;lt;li&amp;gt;Nom : {this.props.name}&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;Force : {this.props.strenght}&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;Santé : {this.props.health}&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;Chance : {this.props.chance}&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    )
+}
+
+}
+
+export default Stats;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Et enfin des services externes (ici des fonctions utiles à la création aléatoire du personnage) dans Services.js :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Renvoie un entier aléatoire
+// entre une valeur min (incluse)
+// et une valeur max (incluse)
+export function randomDice(min, max) {
+min = Math.ceil(min)
+max = Math.floor(max)
+return Math.floor(Math.random() * (max - min +1)) + min
+}
+
+// Stock les données dans le navigateur
+export function saveCharacter(name, strenght, health, chance) {
+localStorage.setItem(&#39;name&#39;, name)
+localStorage.setItem(&#39;strenght&#39;, strenght)
+localStorage.setItem(&#39;health&#39;, health)
+localStorage.setItem(&#39;chance&#39;, chance)
+}
+
+// Enlève les données du navigateur
+export function deleteCharacter() { 
+localStorage.clear()
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gamestory web app</title>
+      <link>http://localhost:50958/project/gs/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:50958/project/gs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SWOR Forum</title>
+      <link>http://localhost:50958/project/swor/</link>
+      <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:50958/project/swor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Children of Memories RPG</title>
+      <link>http://localhost:50958/project/aom/</link>
+      <pubDate>Sun, 15 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:50958/project/aom/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,9 +1,2 @@
 .DS_Store
-config.toml
-archetypes
-content
-data
-layouts
 prod
-static
-themes
