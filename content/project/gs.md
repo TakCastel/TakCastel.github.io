@@ -1,6 +1,6 @@
 +++
 # Date this page was created.
-date = "2017"
+date = "2017-07-01T00:00:00"
 
 # Project title.
 title = "Gamestory web app"

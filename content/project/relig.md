@@ -1,6 +1,6 @@
 +++
 # Date this page was created.
-date = "2017"
+date = "2017-10-16T00:00:00"
 
 # Project title.
 title = "Journalist private blog"
